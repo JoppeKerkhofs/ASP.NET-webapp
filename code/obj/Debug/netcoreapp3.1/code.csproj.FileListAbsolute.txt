@@ -120,4 +120,5 @@ C:/Users/Joppe Kerkhofs/OneDrive - Thomas More/2ITF/DevOps & Security/Case Study
 /app/obj/Debug/netcoreapp3.1/code.dll
 /app/obj/Debug/netcoreapp3.1/code.pdb
 /app/obj/Debug/netcoreapp3.1/code.genruntimeconfig.cache
-/app/obj/Debug/netcoreapp3.1/Razor/Views/Home/SciFi.cshtml.g.cs
+/app/obj/Debug/netcoreapp3.1/Razor/Views/SciFi/SciFi.cshtml.g.cs
+/app/obj/Debug/netcoreapp3.1/Razor/Views/Fantasy/Fantasy.cshtml.g.cs

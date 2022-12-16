@@ -1,0 +1,31 @@
+@{
+    ViewData["Title"] = "Sci-Fi Movies";
+}
+
+<h1>Sci-Fi Movies</h1>
+
+<div id="movieCollection" class="container">
+    <div class="row">
+        @foreach (var movie in Model)
+        {
+            if (movie.Genre == "Sci-Fi")
+            {
+                <div class="movie col-md-6">
+                    <div class="movieTitle">
+                        <img src="@movie.Poster.File.Url" alt="@movie.Poster.Title" width="400" />
+                        <h2 class="text-center">@movie.Title</h2>
+                    </div>
+                    <div class="movieInfo">
+                        <p><b>Genre:</b> @movie.Genre</p>
+                        <p><b>Director:</b> @movie.Director</p>
+                        <p><b>Actors:</b> @movie.Actors</p>
+                        <p><b>Release Date:</b> @movie.ReleaseDate.ToString("dd MMMM yyyy")</p>
+                        <p><b>Run Time:</b> @movie.Runtime</p>
+                        <p><b>IMDB Rating:</b> @movie.IMDBRating/10</p>
+                        <p><b>RT Rating:</b> @movie.RTRating</p>
+                    </div>
+                </div>
+            }
+        }
+    </div>
+</div>

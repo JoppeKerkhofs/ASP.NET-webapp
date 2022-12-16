@@ -6,19 +6,15 @@
     ViewData["Title"] = "Home Page";
 }
 
-<h1>Movies</h1>
+<h1 class="text-center">Select a genre</h1>
 
-@foreach (var movie in Model)
-{
-    <div class="movie">
-        <h2>@movie.Title</h2>
-        <p>Genre: @movie.Genre</p>
-        <p>Director: @movie.Director</p>
-        <p>Actors: @movie.Actors</p>
-        <p>Release Date: @movie.ReleaseDate.ToString("dd MMMM yyyy")</p>
-        <p>Run Time: @movie.Runtime</p>
-        <p>IMDB Rating: @movie.IMDBRating/10</p>
-        <p>RT Rating: @movie.RTRating</p>
-        <img src="@movie.Poster.File.Url" alt="@movie.Poster.Title" width="400" />
-    </div>
-}
+<div id="selectContainer">
+    <ul class="navbar-nav flex-grow-1 text-center">
+        <li class="nav-item">
+            <a id="scifiSelector" class="genreSelector nav-link" asp-area="" asp-controller="SciFi" asp-action="SciFi">Sci-Fi</a>
+        </li>
+        <li class="nav-item">
+            <a id="fantasySelector" class="genreSelector nav-link" asp-area="" asp-controller="Fantasy" asp-action="Fantasy">Fantasy</a>
+        </li>
+    </ul>
+</div>
