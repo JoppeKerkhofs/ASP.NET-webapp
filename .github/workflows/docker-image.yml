@@ -15,7 +15,7 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag aspnetimage-jk:$(date +%s)
+      run: docker build . --file Dockerfile --tag ${{secrets.DOCKER_USER}}/asp.net-webapp:$(date +%s)
     
     - name: Docker login
       env:
@@ -25,4 +25,4 @@ jobs:
         docker login -u $DOCKER_USER -p $DOCKER_PASSWORD
         
     - name: Docker push
-      run: docker push user/app:latest
+      run: docker push ${{secrets.DOCKER_USER}}/asp.net-webapp:latest
