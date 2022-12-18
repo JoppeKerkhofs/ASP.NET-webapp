@@ -53,6 +53,13 @@ namespace code
                 endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
+                endpoints.MapControllerRoute(
+                    name: "SciFi",
+                    pattern: "{controller=SciFi}/{action=SciFi}/{id?}");
+                endpoints.MapControllerRoute(
+                    name: "Fantasy",
+                    pattern: "{controller=Fantasy}/{action=Fantasy}/{id?}");
+                )
             });
         }
     }
